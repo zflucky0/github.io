@@ -1,0 +1,25 @@
+ArCoreApk
+public class ArCoreApk
+Static methods for managing the status of ARCore on the device.
+
+Nested Classes
+enum	ArCoreApk.Availability	Describes the current state of ARCore availability on the device. 
+enum	ArCoreApk.InstallBehavior	Controls the behavior of the installation UI. 
+enum	ArCoreApk.InstallStatus	Indicates the outcome of a call to requestInstall(). 
+enum	ArCoreApk.UserMessageType	Controls the message displayed by the installation UI. 
+Public Methods
+ArCoreApk.Availability	
+checkAvailability(Context applicationContext)
+Determines if ARCore is supported on this device.
+void	
+checkAvailabilityAsync(Context applicationContext, Consumer<ArCoreApk.Availability> callback)
+Asynchronously determines if ARCore is supported on this device.
+static ArCoreApk	
+getInstance()
+Returns the singleton instance of ArCoreApk.
+ArCoreApk.InstallStatus	
+requestInstall(Activity applicationActivity, boolean userRequestedInstall)
+Initiates installation of ARCore when needed.
+ArCoreApk.InstallStatus	
+requestInstall(Activity applicationActivity, boolean userRequestedInstall, ArCoreApk.InstallBehavior installBehavior, ArCoreApk.UserMessageType messageType)
+Initiates installation of ARCore when needed, with configurable behavior.
